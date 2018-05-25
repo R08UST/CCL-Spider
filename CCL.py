@@ -5,7 +5,7 @@ import time
 f=open('./means.csv','w')
 writer=csv.writer(f)
 writer.writerow(['文件名','上文','当前句','下文'])
-mark='意思'
+mark='意思' #Change for crawl other word 
 bs=webdriver.Firefox()
 code=urllib.parse.quote(mark)
 bs.get("http://ccl.pku.edu.cn:8080/ccl_corpus/search?q="+code+"&start=0&num=50&index=FullIndex&outputFormat=HTML&encoding=UTF-8&maxLeftLength=30&maxRightLength=30&orderStyle=score&LastQuery=&dir=xiandai&scopestr=")
